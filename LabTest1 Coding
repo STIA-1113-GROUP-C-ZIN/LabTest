@@ -7,12 +7,8 @@ public class LabTest1 {
 		Scanner scan = new Scanner(System.in);
 		
 		int num;
-		double price;
+		double price,sum,totalPrice = 0,discount,lastTotal;
 		int quantity;
-		double sum;
-		double totalPrice = 0;
-		double discount;
-		double lastTotal;
 		
 		System.out.println("Enter the number of items: ");
 		num = scan.nextInt();
