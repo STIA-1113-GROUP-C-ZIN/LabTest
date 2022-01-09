@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class LabTest1 {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int num;
+		double price;
+		int quantity;
+		double sum;
+		double totalPrice = 0;
+		double discount;
+		double lastTotal;
+		
+		System.out.println("Enter the number of items: ");
+		num = scan.nextInt();
+		
+		if (num > 3) {
+			System.out.println("Items cannot be added more than 3.");
+			return;
+		}
+		
+		for (int i = 0; i < num; i++) {
+			System.out.println("Enter price of item: RM");
+			price = scan.nextDouble();
+			System.out.println("Enter quantity of items: ");
+			quantity = scan.nextInt();
+			
+			sum = quantity * price;
+			totalPrice = totalPrice + sum;
+		}
+		
+		if (totalPrice > 100) {
+			discount = totalPrice * 0.2;
+			lastTotal = totalPrice - discount;
+		}
+		else {
+			discount = totalPrice * 0.1;
+			lastTotal = totalPrice - discount;
+		}
+		
+		System.out.println("Total price: RM" + totalPrice);
+		System.out.println("Discount received: RM" + discount);
+		System.out.println("Price to be paid: RM" + lastTotal);
+	}
+
+}
