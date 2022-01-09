@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class LabTest2 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		int hour;
+		double basicWages = 5.00,sales = 0,commission = 0,dailyWages = 0;
+		
+		System.out.print("Please enter your sales: RM ");
+		sales = sc.nextDouble();
+		System.out.print("Please enter your working hour: ");
+		hour = sc.nextInt();
+		System.out.println();
+		
+		if(sales>=150 && sales<=300) {
+			commission = sales * 0.05;
+		}
+		else if(sales>=300 && sales<=500) {
+			commission = sales * 0.10;
+		}
+		else if(sales>500 ) {
+			commission = sales * 0.15;
+		}
+		
+		dailyWages = basicWages * hour + commission;
+		System.out.print("Commission: RM ");
+		System.out.printf("%.2f%n", commission);
+		System.out.print("Daily wages: RM ");
+		System.out.printf("%.2f%n", dailyWages);
+	}
+
+}
